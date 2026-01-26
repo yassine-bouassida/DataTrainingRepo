@@ -1,1 +1,4 @@
 textFileToIgnore.txt
+.vscode/
+
+**/build/
