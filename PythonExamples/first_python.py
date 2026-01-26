@@ -25,6 +25,25 @@ my_other_boolean: bool = False
 print(type(my_other_boolean))
 #notice the first letter is capitalized for boolean values
 
+#None can be assigned as a type: useful for avoiding errors
+my_none: None = None
+print(type(my_none))
+
+my_string_literal = 'This is also a string'
+print(type(my_string_literal))
+
+# You can concatenate strings using the + operator and add variables into string with interpolation
+
+name: str = "Alice"
+interpolated_greeting: str = "Hello, " + name + "!"
+
+print(interpolated_greeting)
+f_interpolated_greeting: str= f"Hello, {name}!"
+
+#you can also use the .format() method to format your string
+formatted_greeting: str = "Hello, {}!".format(name)
+
+
 
 
 
