@@ -1,3 +1,14 @@
+ritvik egg allergy
+
+Altamash If you can arrange halal meat lol otherwise vegetarian and no pork
+
+Rashmi I don't eat beef or pork
+
+Armin I have an allergy to some tree nuts like pistachios
+
+
+
+
 1) Create a Python program to output the following basic JSON notation.
 Output:
 {
