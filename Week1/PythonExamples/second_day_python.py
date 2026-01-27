@@ -160,7 +160,7 @@ class Num:
     def __add__(self, other):
         return self.number + other*100
 
-num = Num(10)
+num: Num = Num(10)
 print(num.number)
 
 x:int = num.__add__(5)  # returns 15
@@ -168,9 +168,48 @@ print(x)
 
 print(num + 5)  # also returns 15 because of operator overloading 
 
+##############################################################################
+l:list = [1, 2, "three", 4, 5, 2]
+s:set = {1,2,3,4,5}  # sets automatically remove duplicates
+t:tuple = (1, "two", 3.0, True, 1)  # tuples are immutable lists
+d:dict = {"one": 1, "two": 2, "three": 3, "threee": 3}  # dictionaries store key-value pairs
+
+#LISTS
+
+l.append(6)
+print(l)
+appended_list = l + [7, 8, 9]  # creates a new list
+print(appended_list)
+appended_list.append([10,11,12])
+print(appended_list)
+
+final_numbers = [5,6,7,8]
+appended_list.extend(final_numbers)  # extends the list with another list
+print(appended_list)
 
 
+appended_list.insert(0, "start")  # inserts at index 0
+print(appended_list)
 
+#list.pop([index]) removes and returns the item at the given index. If no index is specified, it removes and returns the last item
+print(appended_list.pop())  # removes and returns the last item
+print(appended_list)
 
+#list.remove(value) removes the first occurrence of the value. Raises ValueError if the value is not found
+appended_list.remove(5)
+print(appended_list)
 
+#list.clear() removes all items from the list
+app_list= appended_list.copy()
+#app_list= appended_list
+app_list.clear()
+print("app_list")
+print(app_list)
+print("appended_list")
+print(appended_list)
 
+#list.index(value, [start, [end]]) returns the index of the first occurrence of the value. Raises ValueError if the value is not found
+index_of_two = appended_list.index(2)
+
+#list.count(value) returns the number of occurrences of the value
+print(appended_list.count(7))
