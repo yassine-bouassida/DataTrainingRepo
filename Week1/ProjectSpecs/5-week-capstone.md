@@ -6,7 +6,7 @@
 
 The Data Ingestion Subsystem is designed to collect and organize data from different sources
 into a single place. This part of the system — the Data Ingestion Subsystem — uses Python and
-PostgreSQL to read data, clean it, and load it into a database for later use in analytics.
+MySQL (or PostgreSQL) to read data, clean it, and load it into a database for later use in analytics.
 
 It will:
 
@@ -43,7 +43,7 @@ The Data Ingestion application will:
 ### Definition of Done
 
 The Data Ingestion Subsystem will be considered complete when:
-• It can successfully read and load data from CSV and JSON files into PostgreSQL.
+• It can successfully read and load data from CSV and JSON files into MySQL or PostgreSQL.
 • At least 80% of the code is tested with PyTest.
 • Database connections close properly after use.
 • A short demo and code repository are shared for review.
@@ -71,7 +71,7 @@ Using Pandas and Matplotlib (as well as NumPy, Seaborn and any other packages or
 - Atleast one correlation found in your data.
 - Atleast 3 meaningful visualizations to convey some information derived from the data.
 - Powerpoint slide deck that introduces your data set, presents your conclusions/findings, and contains your graphs/visualizations.
-- Professionally presented on the final day, all group members must talk.
+- Professionally presented on the final day
 
 
 ## Presentation
