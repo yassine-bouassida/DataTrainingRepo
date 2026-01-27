@@ -132,4 +132,45 @@ class InheritsConstructor(InheritedConstructor):
 
 
 inherited_instance = InheritsConstructor(30, "Will")
-print(f"name: {inherited_instance.name}, age: {inherited_instance.age}")
+#print(f"name: {inherited_instance.name}, age: {inherited_instance.age}")
+
+######################################################################
+# this is global, it can actually be referenced in other modules if you import it
+# and it is available inside methods within this module
+name="Will"
+
+def local_and_enclosed():
+    name="Sam" # this is local, it is available insde the function but not outside
+    def enclosed(): #a function within a function is an enclosed namespace: same lifecycle as its parent function
+        #and access to its variables
+        return name # will return Sam, since the enclosed function has access to the paren function's local block
+        #you will get an error if you try and just return name without defining it in the local block before the enclosing block
+    print(enclosed()) # this prints sam
+    name="Luke"
+    return name #this now returns Luke, since it is the local assignment to the variable
+
+print(name) #prints Will
+print(local_and_enclosed()) #prints Sam first because of the enclosed() method, then it prints Luke because of the local assignment
+
+########################
+class Num:
+    def __init__(self,number):
+        self.number = number
+
+    def __add__(self, other):
+        return self.number + other*100
+
+num = Num(10)
+print(num.number)
+
+x:int = num.__add__(5)  # returns 15
+print(x)
+
+print(num + 5)  # also returns 15 because of operator overloading 
+
+
+
+
+
+
+
