@@ -118,3 +118,18 @@ class OuterClass:
 
 outer_instance = OuterClass(10, "hello", "inner instance")
 print(outer_instance)
+
+class InheritedConstructor:
+    def __init__(self,name):
+        self.name = name
+        print("the parent constructor was called")
+
+class InheritsConstructor(InheritedConstructor):
+    def __init__(self, age, name):
+        super().__init__(name) #calls the parent constructor
+        self.age = age
+        print("the child constructor was called")
+
+
+inherited_instance = InheritsConstructor(30, "Will")
+print(f"name: {inherited_instance.name}, age: {inherited_instance.age}")
