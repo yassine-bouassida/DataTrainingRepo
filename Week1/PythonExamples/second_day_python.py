@@ -273,3 +273,48 @@ another_set={3,4,5}
 my_set.update(another_set)
 print(my_set)
 
+###TUPLES
+print(appended_list)
+appended_list[3]= "changed value"
+print(appended_list)
+
+tuple_example=(1,2,3,"four",5,1,2)
+print('should print tuple example')
+print(tuple_example)
+#tuple_example[2]= "changed value"  # this will raise an error because tuples are immutable
+
+tuple_example_count= tuple_example.count(1)
+print(tuple_example_count)
+
+#tuple.index(value) returns the index of the first occurrence of the value. Raises ValueError if the value is not found
+tuple_example_index= tuple_example.index(2)
+print(tuple_example_index)
+
+#dictionaries
+
+def inside_the_dictionary():
+    return "function key"
+
+my_dictionary = {
+    "key": "value",
+    100: 1000,
+    "string key": 5,
+    10: "string value",
+    None: "this still works",
+    "can also do this": None,
+    "function": inside_the_dictionary(),
+    inside_the_dictionary(): "does this work"
+}
+
+print(my_dictionary)
+print(my_dictionary["key"])
+
+my_dictionary["new key"]= "new value"
+print(my_dictionary)
+
+print(my_dictionary.items()) # returns a view object that displays a list of a dictionary's key-value tuple pairs
+
+#dic.setdefault(key, default=None) returns the value of the key if it is in the dictionary. If not, it inserts the key with the default value   
+print(my_dictionary.setdefault("key", "default value"))  # returns "value"
+print(my_dictionary.setdefault("nonexistent", "default value"))  # returns "default value" and adds the key-value pair to the dictionary
+print(my_dictionary)
