@@ -1,5 +1,5 @@
-from calc_abstract import Calculator
-from fun_except import CustomException
+from calculatorabs.calc_abstract import Calculator
+from .fun_except import CustomException
 import numbers
 
 class CalculatorImp(Calculator):

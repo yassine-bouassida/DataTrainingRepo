@@ -1,7 +1,7 @@
-from calculator_implemented import CalculatorImp
+from calculatorpack.calculator_implemented import CalculatorImp
 import pytest
 
-from fun_except import CustomException
+from calculatorpack.fun_except import CustomException
 
 calculator = CalculatorImp()
 
@@ -51,3 +51,5 @@ def test_round_exception_message_correct():
         assert e.message == "Could not round the value"
 
 
+# calculator = CalculatorImp()
+# calculator.add(5,5)
