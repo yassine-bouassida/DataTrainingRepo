@@ -29,5 +29,12 @@ def login():
         return "your credentials are good"
     else:
         return "your credentials are bad!"
+    
+@app.route("/count",methods=["PUT"])
+def add_count():
+    global count
+    count +=1
+    return f"The count is now {count}"
+
 
 app.run()
