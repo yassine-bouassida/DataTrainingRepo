@@ -1,0 +1,102 @@
+What is Python?
+What is PEP 8?
+What is a Python module?
+What is a package in Python?
+What is the difference between a list and a tuple in Python?
+What is a dictionary in Python?
+What is the difference between a dictionary and a list in Python?
+What is a Python generator?
+What is the difference between a function and a method in Python?
+What is a lambda function in Python?
+What is a decorator in Python?
+What is a Python class?
+What is inheritance in Python?
+What is method overriding in Python?
+What is a Python interface?
+What is a metaclass in Python?
+What is monkey patching in Python?
+What is the difference between "is" and "==" in Python?
+What is the difference between "append" and "extend" in Python?
+What is the difference between "iter" and "next" in Python?
+What is the difference between a deep copy and a shallow copy in Python?
+What is the difference between a function and a coroutine in Python?
+What is the GIL in Python?
+What is the purpose of the "if name == 'main':" statement in Python?
+What is the difference between a local variable and a global variable in Python?
+What is a Python package manager?
+What is a Python virtual environment?
+What is the difference between pip and conda in Python?
+What is the purpose of the "yield" keyword in Python?
+What is the purpose of the "map" function in Python?
+What is the purpose of the "filter" function in Python?
+What is the purpose of the "reduce" function in Python?
+What is the difference between "range" and "xrange" in Python?
+What is the difference between "open" and "with open" in Python?
+What is the purpose of the "init" method in Python?
+What is the purpose of the "repr" method in Python?
+What is the purpose of the "str" method in Python?
+What is the purpose of the "call" method in Python?
+What is the purpose of the "len" method in Python?
+What is the purpose of the "getitem" method in Python?
+What is the purpose of the "setitem" method in Python?
+What is the purpose of the "delitem" method in Python?
+What is the purpose of the "getattr" method in Python?
+What is the purpose of the "setattr" method in Python?
+What is the purpose of the "delattr" method in Python?
+What is the purpose of the "iter" method in Python?
+What is the purpose of the "next" method in Python?
+What is the purpose of the "enter" method in Python?
+What is the purpose of the "exit" method in Python?
+What is the purpose of the "super" function in Python?
+What is the purpose of the "self" keyword in Python?
+What is the purpose of the "cls" keyword in Python?
+What is the purpose of the "pass" keyword in Python?
+What is the purpose of the "break" keyword in Python?
+What is the purpose of the "continue" keyword in Python?
+What is the purpose of the "assert" keyword in Python?
+What is the purpose of the "try" and "except" statements in Python?
+What is the purpose of the "finally" statement in Python?
+What is the purpose of the "raise" keyword in Python?
+What is the purpose of the "isinstance" function in Python?
+What is the purpose of the "type" function in Python?
+What is the purpose of the "id" function in Python?
+What is the purpose of the "enumerate" function in Python?
+What is the purpose of the "zip" function in Python?
+What is the purpose of the "sorted" function in Python?
+What is the purpose of the "reversed" function in Python?
+What is the purpose of the "all" function in Python?
+What is the purpose of the "any" function in Python?
+What is the purpose of the "sum" function in Python?
+What is the purpose of the "max" function in Python?
+What is the purpose of the "min" function in Python?
+What is the purpose of the "round" function in Python?
+What is the purpose of the "sorted" method in Python?
+What is the purpose of the "join" method in Python?
+What is the purpose of the "strip" method in Python?
+What is the purpose of the "replace" method in Python?
+What is the purpose of the "split" method in Python?
+What is the purpose of the "startswith" method in Python?
+What is the purpose of the "endswith" method in Python?
+What is the purpose of the "find" method in Python?
+What is the purpose of the "count" method in Python?
+What is the purpose of the "append" method in Python?
+What is the purpose of the "extend" method in Python?
+What is the purpose of the "insert" method in Python?
+What is the purpose of the "remove" method in Python?
+What is the purpose of the "pop" method in Python?
+What is the purpose of the "sort" method in Python?
+What is the purpose of the "reverse" method in Python?
+What is the purpose of the "format" method in Python?
+What is the purpose of the "print" function in Python?
+What is the purpose of the "input" function in Python?
+What is the purpose of the "range" function in Python?
+What is the purpose of the "len" function in Python?
+What is the purpose of the "bool" function in Python?
+What is the purpose of the "int" function in Python?
+What is the purpose of the "float" function in Python?
+What is the purpose of the "str" function in Python?
+What is the purpose of the "list" function in Python?
+What is the purpose of the "dict" function in Python?
+What is the purpose of the "set" function in Python?
+
+https://leetcode.com/discuss/post/3323042/python-100-concepts-question-for-intervi-yaun/
