@@ -1,4 +1,4 @@
-import csv
+import csv, json
 
 #just need a dictionary so I can test our the DictWriter
 file = open('airport_codes.csv','r')
@@ -13,3 +13,6 @@ with open('airport_codes_from_dict.csv','w') as file:
     csv_writer = csv.DictWriter(file,fieldnames=['Airport Codes','Airport Name'])
     rows = [{'Airport Codes': code, 'Airport Name': name} for code, name in airports.items()]
     csv_writer.writerows(rows)
+
+with open('airport_codes_from_dict.json','w') as f:
+  json.dump(airports, f)
