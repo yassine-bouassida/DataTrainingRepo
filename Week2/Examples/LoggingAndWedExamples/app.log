@@ -1,0 +1,13 @@
+8992 - 04-Feb-26 11:13-28 - customLogger - this is a warning
+12892 - 04-Feb-26 11:13:49 - customLogger - this is a warning
+13868 - 04-02-26 11:14:14 - customLogger - this is a warning
+18352 - 04-Feb-26 11:16:09 - customLogger - this is a warning
+18352 - 04-Feb-26 11:16:09 - customLogger - Warning message
+18352 - 04-Feb-26 11:16:09 - customLogger - Error message
+18352 - 04-Feb-26 11:16:09 - customLogger - Critical message
+17496 - 04-Feb-26 11:18:34 - customLogger - this is a warning
+17496 - 04-Feb-26 11:18:34 - customLogger - Debug message
+17496 - 04-Feb-26 11:18:34 - customLogger - Info message
+17496 - 04-Feb-26 11:18:34 - customLogger - Warning message
+17496 - 04-Feb-26 11:18:34 - customLogger - Error message
+17496 - 04-Feb-26 11:18:34 - customLogger - Critical message
