@@ -168,14 +168,14 @@ The following assets are provided to eliminate DevOps friction:
 ## 8. Deliverables
 
 - Completed Kafka batch consumer implementation.
-- PySpark DataFrame transformation pipeline (tested on Docker Spark cluster).
+- PySpark DataFrame transformation pipeline (optional: tested on Docker Spark cluster).
 - Completed Airflow DAG with full orchestration logic.
 - Documentation: Architecture diagram, design decisions, setup instructions.
 - Demo: Live walkthrough of end-to-end pipeline execution.
 
 ---
 
-## 9. Quick Start
+## 9. Quick Start (docker optional setup)
 
 ```bash
 # Navigate to your project directory
