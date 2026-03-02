@@ -2,7 +2,7 @@
 
 ## 1. Summary
 
-A fully containerized, end-to-end data pipeline system that ingests real-time event streams via **Apache Kafka**, processes and transforms them using **PySpark DataFrames/SparkSQL**, and orchestrates the entire workflow via **Apache Airflow** (optional - all running in **Docker containers**.)
+An end-to-end data pipeline system that ingests real-time event streams via **Apache Kafka**, processes and transforms them using **PySpark DataFrames/SparkSQL**, and orchestrates the entire workflow via **Apache Airflow** (optional - all running in **Docker containers**.)
 
 ---
 
@@ -12,7 +12,7 @@ A fully containerized, end-to-end data pipeline system that ingests real-time ev
 
 ### Data Flow
 ```
-Producers (Faker) -> Kafka Topics -> Batch Consumer -> Landing Zone (JSON)
+Producers -> Kafka Topics -> Batch Consumer -> Landing Zone (JSON)
                                                               |
                                                               v
                                      Gold Zone (CSV) <- Spark ETL
@@ -59,20 +59,20 @@ A single `docker-compose.yml` provisions the entire platform:
 - **Objective:** Architect a fault-tolerant event streaming system to ingest raw data from multiple sources.
 
 - **Key Deliverables:**
-    - Kafka running in Docker with two distinct topics:
-        - `user_events` - User activity data (logins, page views, clicks).
-        - `transaction_events` - E-commerce/financial transaction data.
+    - Kafka (optional: running in Docker) with distinct topics:
+        - `user_events` - ex :User activity data (logins, page views, clicks).
+        - `transaction_events` - ex: E-commerce/financial transaction data.
     - **Batch Consumer Script:** A Python script that consumes from Kafka for a configurable time window and writes bounded JSON files to the landing zone.
     - Documentation justifying the topic schema and partitioning strategy.
 
-- **Provided Assets:**
+- **Provided Assets: (for the example setup) **
     - `user_events_producer.py` - Generates mock user activity events.
     - `transaction_events_producer.py` - Generates mock transaction events.
     - `jobs/ingest_kafka_to_landing.py` - **Skeleton starter** for the batch consumer.
 
 ---
 
-### Module B: The PySpark Transformation Engine (Docker Spark Cluster)
+### Module B: The PySpark Transformation Engine (optional Docker Spark Cluster)
 
 - **Objective:** Build a high-performance batch processing layer using DataFrames and SparkSQL.
 
@@ -125,7 +125,7 @@ A single `docker-compose.yml` provisions the entire platform:
 
 | Constraint | Requirement |
 |------------|-------------|
-| **Execution Environment** | Docker Compose (all services containerized) |
+| **Execution Environment** | (optional: Docker Compose, all services containerized ) |
 | **Spark Execution** | `spark-submit` to `spark://spark-master:7077` |
 | **Kafka Deployment** | Docker container (localhost:9094 external, kafka:9092 internal) |
 | **Storage** | Docker volume mounts (`./data`, `./jobs`, `./dags`) |
