@@ -14,8 +14,6 @@ Filtering is one of the most common DataFrame operations. Efficient filtering:
 - Forms the basis of data quality checks and validation
 - Enables targeted analysis and reporting
 
-Understanding filtering deeply, including edge cases like null handling, is essential for building robust data pipelines as part of our Weekly Epic.
-
 ## The Concept
 
 ### filter() vs where()

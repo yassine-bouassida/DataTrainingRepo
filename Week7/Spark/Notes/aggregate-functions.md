@@ -16,7 +16,6 @@ In data engineering, aggregations are everywhere:
 - Creating features for machine learning
 - Validating data quality
 
-Understanding aggregation deeply is essential for our Weekly Epic of *Mastering Spark SQL and DataFrames* because most business questions require some form of grouping and summarization.
 
 ## The Concept
 

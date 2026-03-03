@@ -12,7 +12,7 @@ Performance optimization is a critical skill for data engineers. Two key techniq
 - **Sorting**: Organizing data for efficient queries, reports, and downstream processing
 - **Partitioning**: Controlling how data is distributed across the cluster
 
-Poor partitioning leads to data skew, where some nodes do much more work than others. Proper sorting and partitioning strategies directly impact job execution time, making this essential knowledge for our Weekly Epic of *Mastering Spark SQL and DataFrames*.
+Poor partitioning leads to data skew, where some nodes do much more work than others. Proper sorting and partitioning strategies directly impact job execution time.
 
 ## The Concept
 

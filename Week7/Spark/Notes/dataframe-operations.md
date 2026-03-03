@@ -9,8 +9,6 @@
 
 DataFrames are the workhorse of modern Spark applications. While RDDs give you low-level control, DataFrames provide a structured, optimized interface for working with tabular data. In most production data engineering pipelines, you will spend the majority of your time manipulating DataFrames.
 
-As we continue our Weekly Epic of *Mastering Spark SQL and DataFrames*, today marks the transition from understanding the entry points (SparkSession) to actively working with data. The operations you learn today will be used in virtually every Spark SQL application you build.
-
 ## The Concept
 
 ### What is a DataFrame?

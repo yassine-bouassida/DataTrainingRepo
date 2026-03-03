@@ -13,7 +13,6 @@ While partitioning organizes data by column values into directories, **bucketing
 - Optimizing aggregations on specific columns
 - Reducing shuffle operations during query execution
 
-Bucketing is an advanced optimization that becomes crucial when working with large-scale data, directly supporting our Weekly Epic of *Mastering Spark SQL and DataFrames*.
 
 ## The Concept
 

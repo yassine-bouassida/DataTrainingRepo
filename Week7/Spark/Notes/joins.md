@@ -16,8 +16,6 @@ As data engineers, you will join datasets constantly:
 - Matching records between systems
 - Building denormalized tables for analytics
 
-Mastering joins is a critical skill for our Weekly Epic of *Mastering Spark SQL and DataFrames*.
-
 ## The Concept
 
 ### Join Types Overview
