@@ -27,7 +27,8 @@ Producers -> Kafka Topics -> Batch Consumer -> Landing Zone (JSON)
 
 ## 3. Local Infrastructure Architecture
 
-All components run locally using Docker.
+(optional) All components run locally using Docker. 
+Or just run all components (spark, kafka, airflow) locally.
 
 ### Docker Compose (optional) Stack 
 A single `docker-compose.yml` provisions the entire platform:
@@ -160,7 +161,7 @@ The following assets are provided to eliminate DevOps friction:
 | `jobs/etl_job.py` | Skeleton - PySpark transformation pipeline |
 | `dags/dag_streamflow.py` | Skeleton - Airflow orchestration DAG |
 
-> [!CAUTION]
+> [!CAUTION] (optional)
 > Skeleton files contain function signatures and docstrings but **no implementation**. Teams are to complete the TODO sections.
 
 ---
@@ -172,6 +173,7 @@ The following assets are provided to eliminate DevOps friction:
 - Completed Airflow DAG with full orchestration logic.
 - Documentation: Architecture diagram, design decisions, setup instructions.
 - Demo: Live walkthrough of end-to-end pipeline execution.
+- Data Analysis answering pertinent questions for end-user personas
 
 ---
 
