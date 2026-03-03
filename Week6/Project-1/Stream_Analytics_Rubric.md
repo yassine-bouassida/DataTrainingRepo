@@ -1,4 +1,8 @@
+### project description: 
+An end-to-end data pipeline system that ingests data via Apache Kafka, processes and transforms data using PySpark DataFrames/SparkSQL, and orchestrates the entire workflow via Apache Airflow.
+
 # Stream Analytics Platform – Grading Rubric
+
 
 This rubric evaluates student projects for the Stream Analytics Platform, emphasizing **architecture design, PySpark transformations, data analysis, schema design, and the full data lifecycle**. The demo section explicitly includes stating **clear objectives** and introducing all datasets, fields, and topics covered.
 
