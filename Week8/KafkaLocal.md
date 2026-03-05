@@ -22,7 +22,11 @@ metadata.log.dir=/home/{username}/kafka_2.13-4.0.1/kraft-combined-logs
 controller.quorum.voters=1@localhost:9093
 ```
 
-- while in the kafka directory you changed to above:
+- while in the kafka directory you changed to above, run the following:
 ```bash
 bin/kafka-storage.sh format -t $(bin/kafka-storage.sh random-uuid) -c config/server.properties
+```
+
+```bash
+mkdir -p /home/{username}/kafka_2.13-4.0.1/kraft-combined-logs
 ```
