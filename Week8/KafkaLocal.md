@@ -51,3 +51,17 @@ bin/kafka-topics.sh --list --bootstrap-server localhost:9092
 ```bash
 bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic quickstart-events --from-beginning
 ```
+
+- python example producer
+```python
+
+from kafka import KafkaProducer
+
+producer = KafkaProducer(bootstrap_servers=['localhost:9092'])
+producer.send('test', b'hello worldssssss')
+producer.flush()
+```
+
+```
+
+```
