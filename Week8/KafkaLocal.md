@@ -52,7 +52,7 @@ bin/kafka-topics.sh --list --bootstrap-server localhost:9092
 bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic quickstart-events --from-beginning
 ```
 
-- python example producer
+- python example producer, after `pip install kafka-python`
 ```python
 
 from kafka import KafkaProducer
@@ -62,6 +62,43 @@ producer.send('test', b'hello worldssssss')
 producer.flush()
 ```
 
-```
+- run a consumer in python:
+```python
+from kafka import KafkaConsumer
+import logging
 
+# Configure logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger("KafkaConsumer")
+
+# Kafka Consumer setup
+consumer = KafkaConsumer(
+    'test',                        # topic name
+    bootstrap_servers=['localhost:9092'],  # Kafka broker
+    auto_offset_reset='earliest',  # read from beginning if no offsets yet
+    group_id='file-consumer-group' # consumer group id
+)
+
+def consume():
+    """
+    Consume messages from Kafka and print them.
+    If messages are chunks of a file, they can be written to disk.
+    """
+    logger.info("Starting Kafka consumer...")
+    for message in consumer:
+        # message.value is a bytes object
+        data = message.value
+        # For simple strings:
+        try:
+            text = data.decode('utf-8')
+            logger.info(f"Received message: {text}")
+        except UnicodeDecodeError:
+            # For binary files:
+            logger.info(f"Received {len(data)} bytes of binary data")
+            # Example: append to a file
+            with open("output_file.bin", "ab") as f:
+                f.write(data)
+
+if __name__ == "__main__":
+    consume()
 ```
