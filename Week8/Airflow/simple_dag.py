@@ -1,11 +1,11 @@
 from airflow import DAG
 from airflow.decorators import task
-from airflow.utils.dates import days_ago
+from datetime import datetime, timedelta
 
 with DAG(
     dag_id="simple_taskflow_dag",
-    start_date=days_ago(1),
-    schedule_interval=None,
+    start_date=datetime.now() - timedelta(days=1),
+    schedule=None,
     catchup=False,
     tags=["example"]
 ) as dag:
@@ -23,7 +23,6 @@ with DAG(
     def load_data(transformed_data):
         print(f"Loading: {transformed_data}")
 
-    # Implicit dependencies via XCom
     raw = extract_data()
     transformed = transform_data(raw)
     load_data(transformed)
@@ -50,6 +49,7 @@ with DAG(
 # pip show apache-airflow
 
 #mkdir ~/airflow
+#mkdir ~/airflow/dags
 
 # export AIRFLOW_HOME=~/airflow
 # export AIRFLOW__CORE__DAGS_FOLDER=$AIRFLOW_HOME/dags
