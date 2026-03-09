@@ -111,7 +111,7 @@ import time
 spark = SparkSession.builder.appName("Caching Demo").getOrCreate()
 
 # Create a DataFrame with some computation
-df = spark.range(10000000).withColumn("value", (spark.range(1).selectExpr("id * 2").first()[0]))
+df = spark.range(10000000).withColumn("value", F.lit(spark.range(1).selectExpr("id * 2").first()[0]))
 
 # Without caching: each action recomputes
 print("Without caching:")
@@ -148,18 +148,21 @@ from pyspark import StorageLevel
 spark = SparkSession.builder.appName("Persist Demo").getOrCreate()
 
 df = spark.range(1000000)
+df1 = spark.range(1000001)
+df2 = spark.range(1000002)
+df3 = spark.range(1000003)
 
 # MEMORY_ONLY: Fastest, but may lose data if memory insufficient
 df_memory = df.persist(StorageLevel.MEMORY_ONLY)
 
 # MEMORY_AND_DISK: Safe default, spills to disk if needed
-df_disk = df.persist(StorageLevel.MEMORY_AND_DISK)
+df_disk = df1.persist(StorageLevel.MEMORY_AND_DISK)
 
 # MEMORY_ONLY_SER: Less memory, more CPU (serialization)
-df_ser = df.persist(StorageLevel.MEMORY_ONLY_SER)
+df_ser = df2.persist(StorageLevel.MEMORY_ONLY_SER)
 
 # DISK_ONLY: When memory is precious
-df_disk_only = df.persist(StorageLevel.DISK_ONLY)
+df_disk_only = df3.persist(StorageLevel.DISK_ONLY)
 
 # Trigger caching
 df_memory.count()
